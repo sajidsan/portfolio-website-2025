@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './index.css'
 
 function App() {
   
 
   return (
-    <div className="border-2 border-green-500 my-12 max-w-2xl mx-auto px-8 py-12 text-neutral-900 font-serif leading-relaxed">
+    <div className="border-2 border-green-500 m-12 max-w-2xl mx-auto px-8 py-12 text-neutral-900 font-serif leading-relaxed">
       <header className="mb-12">
         <h1 className="text-3xl font-sans font-bold tracking-tight">Sajid Reshamwala<span className="text-green-500">.</span></h1>
         <p className="text-lg mt-2 text-neutral-600">
