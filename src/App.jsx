@@ -22,10 +22,7 @@ function App() {
       <section className="mb-12">
         <h2 className="text-xl font-sans font-bold mb-2">Summary</h2>
         <p>
-          Experienced design leader with a decade of expertise guiding cross-functional
-          teams at major tech companies and startups. Specializes in launching and leading
-          high-impact projects that scale into ongoing programs by aligning stakeholders,
-          defining vision, and driving product strategy.
+        I’m a product designer with a background in design research and mechanical engineering. I’ve spent the last decade helping startups and big tech teams turn fuzzy ideas into thoughtful products. I lead through doing—prototyping, workshopping, and building systems that help people make better decisions together.
         </p>
       </section>
 
@@ -33,35 +30,43 @@ function App() {
         <h2 className="text-xl font-sans font-bold mb-2">Experience</h2>
         <ul className="space-y-4">
           <li>
-            <strong>Google — Senior Interaction Designer</strong>
+            <strong>Creative Sabbatical</strong>
+            <br />
+            <span className="text-sm text-neutral-500">2023 – Present</span>
+            <p>
+             In July of 2023 I left Google to take a break from formal design work and explore creativity through the full-time study of jazz and the baritone saxophone.
+            </p>
+          </li>
+          <li>
+            <strong>Senior Interaction Designer - Google</strong>
             <br />
             <span className="text-sm text-neutral-500">2018 – 2023</span>
             <p>
-              Led the pilot for a multi-team, high-impact co-design program for Bard and Gemini. Helped transform a research prototype into a production-ready tool (Relay). Launched the Next Billion Users Pattern Library.
+            At Google, I led co-creation work with the Bard and Gemini teams and helped turn a generative UI prototype into a real product(now called Relay). I also built tools and workshops to help teams stay grounded in user needs—even when everything was moving fast.
             </p>
           </li>
           <li>
-            <strong>Therachat — Director of Design</strong>
+            <strong>Director of Design — Therachat</strong>
             <br />
             <span className="text-sm text-neutral-500">2016 – 2018</span>
             <p>
-              Guided the team through a pivotal product transition. Built a design system and mentored product designers and researchers. Product acquired by Wellin5.
+            I helped lead Therachat through a full product pivot, guiding design sprints and pilots until we landed on something that stuck (and eventually got acquired). I also built the design system and mentored our design and research team.
             </p>
           </li>
           <li>
-            <strong>Jut, Inc. — Lead Product Designer</strong>
+            <strong>Lead Product Designer — Jut, Inc.</strong>
             <br />
             <span className="text-sm text-neutral-500">2014 – 2015</span>
             <p>
-              Designed developer tools and led Jut’s first design vision initiative. Introduced inclusive design practices and research-based UX.
+            At Jut, I worked on dev tools, snuck delight into dashboards, and led the company’s first future vision project.
             </p>
           </li>
           <li>
-            <strong>Yahoo — UX Designer & Researcher</strong>
+            <strong>UX Designer & Researcher - Yahoo</strong>
             <br />
             <span className="text-sm text-neutral-500">2012 – 2014</span>
             <p>
-              Designed and prototyped features for Yahoo! Finance and Yahoo! Screen. Facilitated design workshops that turned research insights into features.
+            Yahoo was where I cut my teeth—prototyping new features, running field research, and creating one very earnest design video that ended up setting a new bar for the team.
             </p>
           </li>
         </ul>
@@ -76,9 +81,6 @@ function App() {
         </ul>
       </section>
 
-      <footer className="text-sm text-neutral-500 mt-16">
-        Thanks for stopping by ✌️
-      </footer>
     </div>
   );
 }
