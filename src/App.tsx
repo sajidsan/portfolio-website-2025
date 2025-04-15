@@ -3,6 +3,7 @@ import './index.css'
 import TextRotate from '@/fancy/components/text/text-rotate'
 import VerticalCutReveal from '@/fancy/components/text/vertical-cut-reveal'
 import { motion, LayoutGroup } from 'framer-motion'
+import ProjectCard from '@/components/ProjectCard'
 
 
 
@@ -16,25 +17,44 @@ function App() {
     
     <main>
       <div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
+      <section className="w-dvw h-dvh flex items-center justify-center bg-white p-12 sm:p-20 md:p-24">
       <LayoutGroup>
-  <motion.p className="text-4xl leading-tight sm:text-5xl font-light text-black" layout>
-    Hi, I'm Saj and I build things<br />
-    that help people{" "}
-    <TextRotate
-      texts={["build", "connect", "imagine", "create"]}
-      mainClassName="text-white px-3 bg-green-500 overflow-hidden py-1 justify-center rounded-lg inline-block"
-      staggerFrom={"last"}
-      initial={{ y: "100%" }}
-      animate={{ y: 0 }}
-      exit={{ y: "-120%" }}
-      staggerDuration={0.025}
-      splitLevelClassName="overflow-hidden pb-1"
-      transition={{ type: "spring", damping: 30, stiffness: 400 }}
-      rotationInterval={2000}
-    />
-  </motion.p>
-</LayoutGroup>
+  <motion.div className="text-4xl leading-tight sm:text-5xl font-light text-black" layout>
+    <div>
+    Hi, I'm Saj and I build things</div>
+    <div>that help people{" "}  
+      <span className="inline-block align-baseline relative top-[1px]">
+        <TextRotate
+          texts={["build", "connect", "imagine", "create"]}
+          mainClassName="inline-block text-white px-3 bg-green-500 overflow-hidden py-1 rounded-lg inline-block align-baseline relative top-[24px]"
+          staggerFrom={"last"}
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "-120%" }}
+          staggerDuration={0.025}
+          splitLevelClassName="overflow-hidden pb-1"
+          transition={{ type: "spring", damping: 30, stiffness: 400 }}
+          rotationInterval={2000}
+        />
+      </span>
     </div>
+  </motion.div>
+  </LayoutGroup>
+  </section>
+  </div>
+  <section className="p-8 md:p-16 bg-white">
+    <ProjectCard 
+      title="Therachat"
+      period="2016 - 2018" 
+      summary="Back in the day..."
+      imageUrl="/images/placeholder.jpg"
+      href="#"
+      >
+
+    </ProjectCard>
+  </section>
+
+    
       <div className="border-2 border-green-500 mx-8 my-8 max-w-2xl px-8 py-12 text-neutral-900 font-serif leading-relaxed">
         <header className="mb-12">
           
