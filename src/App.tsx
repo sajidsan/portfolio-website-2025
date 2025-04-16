@@ -40,9 +40,9 @@ function App() {
     </div>
   </motion.div>
   </LayoutGroup>
-  </section>
+  </section> 
   </div>
-  <section className="p-8 md:p-16 bg-white">
+  <section>
     <ProjectCard 
       title="Therachat"
       period="2016 - 2018" 
