@@ -5,8 +5,8 @@ function App() {
   
 
   return (
-    <div className="border-2 border-green-500 mx-auto my-8 max-w-2xl px-8 py-12 text-neutral-900 font-serif leading-relaxed">
-      <div className="pl-0 pr-0 md:pl-0 md:pr-32">
+    <div className="border-2 border-green-500 mx-auto my-0 md:my-8 max-w-2xl px-8 py-8 text-neutral-900 font-serif leading-relaxed">
+      <div className="pl-0 pr-0 md:pl-0 md:pr-36">
         <header className="pb-12">
           <h1 className="text-3xl font-sans font-bold tracking-tight">Sajid Reshamwala<span className="text-green-500">.</span></h1>
           <p className="text-lg mt-2 text-neutral-600">
