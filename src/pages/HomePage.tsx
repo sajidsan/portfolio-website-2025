@@ -50,14 +50,22 @@ export default function HomePage() {
         <section>
         
             <ProjectCard 
-            title="Google"
-            period="2018 - 2023" 
-            summary="At Therachat, I guided our team through 6 months of design sprints, helped us find a new product direction, and lead the design of our mobile and webapps from the ground up."
-            imageUrl="/images/therachat-cover.png"
+            title="InsightUX"
+            period="Google, 2018 - 2023" 
+            summary="At InsightUX, I co-designed our co-creation program to help teams across Google incorporate AI into their product architecture."
+            imageUrl="/images/cocreation-project-preview.png"
             href="#"
             >
 
 
+            </ProjectCard>
+            <ProjectCard 
+            title="Relay"
+            period="Google, 2018 - 2023" 
+            summary="While working on Relay, I helped transition a design-to-code research project into a user-facing product."
+            imageUrl="/images/preview-relay.png"
+            href="#"
+            >
             </ProjectCard>
             <ProjectCard 
             title="Therachat"
@@ -73,7 +81,7 @@ export default function HomePage() {
             title="Jut"
             period="2014 - 2015" 
             summary="At Jut I launched apps and introduced a team to user centered design."
-            imageUrl="/images/jut-macbook-scrim.png"
+            imageUrl="/images/preview-jut.png"
             href="/jut"
             
             >

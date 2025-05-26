@@ -9,6 +9,7 @@ interface ProjectCardProps {
     imageUrl: string
     href: string
     accentColor?: string
+    bgColor?: string
     hideButton?: boolean
 }
 
@@ -21,7 +22,8 @@ export default function ProjectCard({
     imageUrl,
     href,
     accentColor = 'blue-700',
-    hideButton = false
+    hideButton = false,
+    bgColor = 'white',
 
 }: ProjectCardProps) {
     return (
@@ -30,17 +32,18 @@ export default function ProjectCard({
                 // layout
                 // whileHover={{ scale: 1.02 }}
                 // transition={{ type: "spring", stiffness: 30, damping: 20 }} 
-                className="border-1 border-solid border-neutral-200 bg-white
-                        
+                className="relative border-1 border-solid border-neutral-200 bg-white
+                            
                             p-4
                             sm:px-32 py-16 
                             flex flex-col md:flex-row
                             overflow-hidden
                 "
-            >
+            >   
                 <div className="p-12 
                                 md:w-3/6
                                 ">
+                    <img className=""></img>
                     <h1 className="mb-2 text-5xl text-black-800 font-regular leading-12">{title}</h1>
                     <p className="mb-2 text-base text-black-800">{period}</p>
                     <p className="mb-6 font-serif text-xl max-w-prose text-black-800">{summary}</p>
@@ -57,7 +60,7 @@ export default function ProjectCard({
                 
                 <img   
                     className="
-                                mx-20 px-20 py-20
+                                px-20 py-8
                                 hidden
                                 md:block
                                 md:w-3/6
