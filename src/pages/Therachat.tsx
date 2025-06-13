@@ -21,15 +21,15 @@ export default function TherachatPage() {
         <ImageFullBleedHero
             imageUrl="/images/therachat-heroImage.png">
         </ImageFullBleedHero>
-      <ProjectIntro 
-                  title="Therachat"
-                  period="2014 - 2015"
-                  focus="Product Design and Strategy"
-                  summary="At Therachat, I guided our team through 6 months of design sprints, helped us find a new product direction, and lead the design of our mobile and webapps from the ground up."
-                  imageUrl="/images/therachat-cover.png"
-                  href="#"
-                  >
-      
+        <ProjectIntro 
+                    title="Therachat"
+                    period="2014 - 2015"
+                    focus="Product Design and Strategy"
+                    summary="At Therachat, I guided our team through 6 months of design sprints, helped us find a new product direction, and lead the design of our mobile and webapps from the ground up."
+                    imageUrl="/images/therachat-cover.png"
+                    href="#"
+                    >
+        
         </ProjectIntro>
         
         

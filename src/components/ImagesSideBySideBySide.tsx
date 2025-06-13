@@ -18,39 +18,50 @@ export default function ImagesSideBySide({
 
 }: ImagesSideBySideProps) {
     return (
-        <ScrollReveal>
-        <div className="px-4 sm:px-56 flex flex-col md:flex-row overflow-hidden gap-4">
-            <img   
-                className="
-                            pb-4
-                            block
-                            w-full h-full sm:w-1/3 object-cover
-                            "
-                src={imageUrl1}
-                alt={'Screenshot of ${title}'}
-                
-            /> 
-            <img   
-                className="
-                            pb-4
-                            block
-                            w-full h-full sm:w-1/3 object-cover
-                            "
-                src={imageUrl2}
-                alt={'Screenshot of ${title}'}
-                
-            />  
-            <img   
-                className="
-                            pb-4
-                            block
-                            w-full h-full sm:w-1/3 object-cover
-                            "
-                src={imageUrl3}
-                alt={'Screenshot of ${title}'}
-                
-            />  
+        
+        <div className="px-4 sm:px-56 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <ScrollReveal
+                delay={.1}
+                >
+                <img   
+                    className="
+                                pb-4
+                                w-full h-full
+                                "
+                    src={imageUrl1}
+                    alt={'Screenshot of ${title}'}
+                    
+                /> 
+            </ScrollReveal>
+            <ScrollReveal
+                delay={.6}
+            >
+                <img   
+                    className="
+                                pb-4
+                                
+                                w-full h-full
+                                "
+                    src={imageUrl2}
+                    alt={'Screenshot of ${title}'}
+                    
+                />  
+            </ScrollReveal>
+            <ScrollReveal
+                delay={.8}
+            >
+                <img   
+                    className="
+                                pb-4
+                                
+                                w-full h-full
+                                "
+                    src={imageUrl3}
+                    alt={'Screenshot of ${title}'}
+                    
+                />  
+            </ScrollReveal>
         </div>    
-        </ScrollReveal>
+        
     )
 }

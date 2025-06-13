@@ -18,18 +18,16 @@ export default function TextAndImageAndTitle({
 }: TextAndImageAndTitleProps) {
     return (
         
-            <div className="px-4 sm:px-54 py-4 flex flex-col">
+            <div className="px-4 sm:px-56 py-4 flex flex-col">
                 {!hideTitle && ( 
                     <h1 className="text-3xl font-light text-neutral-800 mb-4">{title}</h1>
                 )}
                 <div
                     className=" bg-white
-                            
-                                
                                 sm:py-4
-                                 
                                 flex flex-col md:flex-row
                                 overflow-hidden
+                                space-x-8
                     "
                 >
                     <div className=" 
@@ -39,7 +37,6 @@ export default function TextAndImageAndTitle({
                         
 
                     </div>
-                    
                     <img   
                         className="
                                     pb-4
@@ -51,10 +48,7 @@ export default function TextAndImageAndTitle({
                         src={imageUrl}
                         alt={'Screenshot of ${title}'}
                         
-                    />  
-                    
-                    
-                    
+                    />   
                 </div>
             </div>
         

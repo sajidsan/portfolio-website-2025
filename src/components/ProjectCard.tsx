@@ -7,6 +7,7 @@ interface ProjectCardProps {
     period: string
     summary: string
     imageUrl: string
+    logoUrl?: string
     href: string
     accentColor?: string
     bgColor?: string
@@ -20,6 +21,7 @@ export default function ProjectCard({
     period,
     summary,
     imageUrl,
+    logoUrl,
     href,
     accentColor = 'blue-700',
     hideButton = false,
@@ -32,45 +34,53 @@ export default function ProjectCard({
                 // layout
                 // whileHover={{ scale: 1.02 }}
                 // transition={{ type: "spring", stiffness: 30, damping: 20 }} 
-                className="relative border-1 border-solid border-neutral-200 bg-white
+                className="relative border-b border-solid border-neutral-200 bg-white
                             
                             p-4
-                            sm:px-32 py-16 
+                            sm:px-44 py-16 
                             flex flex-col md:flex-row
                             overflow-hidden
                 "
             >   
                 <div className="p-12 
-                                md:w-3/6
+                                md:w-2/6
                                 ">
-                    <img className=""></img>
+                    {/* // future logo  */}
+                    {logoUrl &&
+                    <img className="w-auto h-14 pb-2" src={logoUrl}/> }
                     <h1 className="mb-2 text-5xl text-black-800 font-regular leading-12">{title}</h1>
                     <p className="mb-2 text-base text-black-800">{period}</p>
                     <p className="mb-6 font-serif text-xl max-w-prose text-black-800">{summary}</p>
                     {!hideButton && (
                     <Link 
                         to={href} 
-                        className={`px-6 py-2 border-2 border-black text-black-800 text-lg rounded-md hover:bg-${accentColor} hover:border-${accentColor} hover:text-white transition`}>
+                        className={`px-6 py-2 border-2 border-black text-black-800 text-lg rounded-md hover:bg-black hover:border-black hover:text-white transition`}>
                         See Work
                     </Link>
                     )}
                     
 
                 </div>
-                
+                <div
+                    className="
+                        px-12 py-8
+                        hidden
+                        md:block
+                        md:w-4/6
+                    "
+                    >
+                <ScrollReveal>
                 <img   
                     className="
-                                px-20 py-8
-                                hidden
-                                md:block
-                                md:w-3/6
-                                w-full h-full object-cover
-                                "
+                        
+                        w-full h-full object-cover
+                        "
                     src={imageUrl}
                     alt={'Screenshot of ${title}'}
                     
                 />  
-                
+                </ScrollReveal>
+                </div>
                   
                 
             </motion.div>

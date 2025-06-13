@@ -44,11 +44,6 @@ Through conversations with our customers, we saw what our users’ workflow look
 
         </TextAndTitle>
         
-        <TextBlock
-            text="Our approach was to bridge the gap between the limitations of a GUI interface and the flexibility of a language."
-            >
-        </TextBlock>
-        
 
         
         <TextAndImageAndTitle
@@ -58,6 +53,10 @@ Through conversations with our customers, we saw what our users’ workflow look
             hideTitle={true}
             >
         </TextAndImageAndTitle>
+        <TextBlock
+            text="Our approach was to bridge the gap between the limitations of a GUI interface and the flexibility of a language."
+            >
+        </TextBlock>
         
         <LargeImage
             imageUrl="/images/jut-learningCurve-after.png">

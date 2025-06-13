@@ -13,7 +13,7 @@ interface ScrollRevealProps {
 export default function ScrollReveal({
     children,
     className = "",
-    delay = 0.1,
+    delay = 0.2,
     duration = 1,
 }: ScrollRevealProps) {
     const ref = useRef(null)
@@ -24,8 +24,8 @@ export default function ScrollReveal({
         <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 0 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay }}
+            animate={isInView ? { opacity: 1, y: -5 } : {}}
+            transition={{ duration, delay }}
             className={className}
         >
             {children}

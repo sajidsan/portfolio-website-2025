@@ -7,7 +7,7 @@ interface ProjectIntroProps {
     period: string
     focus: string
     summary: string
-    imageUrl: string
+    imageUrl?: string
     href: string
 }
 
@@ -43,19 +43,20 @@ export default function ProjectIntro({
                     
 
                 </div>
-                
-                <img   
-                    className="
-                                mx-20 px-20 pb-4 rounded-4xl
-                                hidden
-                                lg:block
-                                lg:w-3/6
-                                w-full h-full object-cover
-                                "
-                    src={imageUrl}
-                    alt={'Screenshot of ${title}'}
-                    
-                />  
+                {imageUrl &&
+                    <img   
+                        className="
+                                    mx-20 px-20 pb-4 rounded-4xl
+                                    hidden
+                                    lg:block
+                                    lg:w-3/6
+                                    w-full h-full object-cover
+                                    "
+                        src={imageUrl}
+                        alt={'Screenshot of ${title}'}
+                        
+                    />  
+                }
                 
                   
                 

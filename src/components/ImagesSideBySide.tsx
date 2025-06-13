@@ -17,7 +17,7 @@ export default function ImagesSideBySide({
 }: ImagesSideBySideProps) {
     return (
         <ScrollReveal>
-        <div className="px-4 sm:px-56 flex flex-col md:flex-row overflow-hidden gap-4">
+        <div className="px-4 sm:px-56 flex flex-col md:flex-row overflow-hidden space-x-8">
             <img   
                 className="
                             pb-4
