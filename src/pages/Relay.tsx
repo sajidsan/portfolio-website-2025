@@ -13,6 +13,24 @@ import TextAndTitle from '@/components/TextAndTitle'
 import TextAndImageAndTitle from '@/components/TextAndImageAndTitle'
 import TextBlock from '@/components/TextBlock'
 import LargeVideo from '@/components/LargeVideo'
+import FooterPanels from '@/components/FooterPanels'
+const customFooterPanels = [
+  {
+    title: 'Co-Creation',
+    imageUrl: '/images/footer-coCreation.png',
+    link: '/coCreation',
+  },
+  {
+    title: 'Product',
+    imageUrl: '/images/footer-therachat.png',
+    link: '/therachat',
+  },
+  {
+    title: 'Research',
+    imageUrl: '/images/footer-yResearch.png',
+    link: '/yahooResearch',
+  },
+]
 
 
 
@@ -107,6 +125,8 @@ export default function RelayPage() {
         >
             
         </LargeVideo>
+        
+        <FooterPanels panels={customFooterPanels} />
         
     </div>
 

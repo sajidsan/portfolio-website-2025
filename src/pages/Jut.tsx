@@ -13,6 +13,24 @@ import TextAndTitle from '@/components/TextAndTitle'
 import TextAndImageAndTitle from '@/components/TextAndImageAndTitle'
 import TextBlock from '@/components/TextBlock'
 import NextStep from '@/components/NextStep'
+import FooterPanels from '@/components/FooterPanels'
+const customFooterPanels = [
+  {
+    title: 'Designing for AI',
+    imageUrl: '/images/footer-cocreation.png',
+    link: '/coCreation',
+  },
+  {
+    title: 'Product',
+    imageUrl: '/images/footer-therachat.png',
+    link: '/therachat',
+  },
+  {
+    title: 'Design to Code',
+    imageUrl: '/images/footer-relay.png',
+    link: '/relay',
+  },
+]
 
 
 
@@ -129,10 +147,8 @@ Through conversations with our customers, we saw what our users’ workflow look
             imageUrl3="/images/jut-monster-wait.gif"
             >
         </ImagesSideBySideBySide>
-        <NextStep
-            children="Next: Yahoo Finance">
 
-        </NextStep>
+        <FooterPanels panels={customFooterPanels} />
         
 
 

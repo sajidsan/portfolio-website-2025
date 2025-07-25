@@ -13,6 +13,24 @@ import TextAndTitle from '@/components/TextAndTitle'
 import TextAndImageAndTitle from '@/components/TextAndImageAndTitle'
 import TextBlock from '@/components/TextBlock'
 import LargeVideo from '@/components/LargeVideo'
+import FooterPanels from '@/components/FooterPanels'
+const customFooterPanels = [
+  {
+    title: 'Design to Code',
+    imageUrl: '/images/footer-relay.png',
+    link: '/relay',
+  },
+  {
+    title: 'Product',
+    imageUrl: '/images/footer-therachat.png',
+    link: '/therachat',
+  },
+  {
+    title: 'Research',
+    imageUrl: '/images/footer-yResearch.png',
+    link: '/yahooResearch',
+  },
+]
 
 
 
@@ -82,14 +100,8 @@ export default function CoCreationPage() {
             variant="rounded"
             >
         </LargeImage>
+        <FooterPanels panels={customFooterPanels} />
 
-        
-
-        
-
-
-
-        
         
     </div>
 

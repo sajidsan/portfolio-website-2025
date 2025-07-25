@@ -11,13 +11,31 @@ import ImageFullBleedHero from '@/components/ImageFullBleedHero'
 import TextAndTitle from '@/components/TextAndTitle'
 import TextAndImageAndTitle from '@/components/TextAndImageAndTitle'
 import TextBlock from '@/components/TextBlock'
+import FooterPanels from '@/components/FooterPanels'
+const customFooterPanels = [
+  {
+    title: 'Co-Creation',
+    imageUrl: '/images/footer-coCreation.png',
+    link: '/coCreation',
+  },
+  {
+    title: 'Design to Code',
+    imageUrl: '/images/footer-relay.png',
+    link: '/relay',
+  },
+  {
+    title: 'Research',
+    imageUrl: '/images/footer-yResearch.png',
+    link: '/yahooResearch',
+  },
+]
 
 
 
 
 export default function TherachatPage() {
     return (
-      <div className="">
+      <div>
         <ImageFullBleedHero
             imageUrl="/images/therachat-heroImage.png">
         </ImageFullBleedHero>
@@ -95,6 +113,7 @@ export default function TherachatPage() {
             imageUrl2="/images/therachat-web-20.png"
             >
         </ImagesSideBySide>
+        <FooterPanels panels={customFooterPanels} />
 
 
 

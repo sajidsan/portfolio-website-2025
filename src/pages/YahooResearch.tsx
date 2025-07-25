@@ -11,6 +11,29 @@ import ImageFullBleedHero from '@/components/ImageFullBleedHero'
 import TextAndTitle from '@/components/TextAndTitle'
 import TextAndImageAndTitle from '@/components/TextAndImageAndTitle'
 import TextBlock from '@/components/TextBlock'
+import FooterPanels from '@/components/FooterPanels'
+const customFooterPanels = [
+  {
+    title: 'Design to Code',
+    imageUrl: '/images/footer-relay.png',
+    link: '/relay',
+  },
+  {
+    title: 'Product',
+    imageUrl: '/images/footer-therachat.png',
+    link: '/therachat',
+  },
+//   {
+//     title: 'Research',
+//     imageUrl: '/images/footer-yResearch.png',
+//     link: '/yahooResearch',
+//   },
+{
+    title: 'Designing for AI',
+    imageUrl: '/images/footer-coCreation.png',
+    link: '/cocreation',
+  },
+]
 
 
 
@@ -74,6 +97,7 @@ While it was easy to walk away from field studies inspired, the more difficult j
         <LargeImage
             imageUrl="/images/yahooResearch-flexible.png">
         </LargeImage>
+        <FooterPanels panels={customFooterPanels} />
 
 
 
