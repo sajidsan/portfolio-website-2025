@@ -118,13 +118,7 @@ export default function RelayPage() {
             variant="rounded"
             >
         </LargeImage>
-        <LargeVideo
-            videoUrl="/videos/coCreation-workshop-blurred.mp4"
-            variant="rounded"
-            overlayText="The original footage has been blurred to protect the privacy of research participants."
-        >
-            
-        </LargeVideo>
+        
         
         <FooterPanels panels={customFooterPanels} />
         
