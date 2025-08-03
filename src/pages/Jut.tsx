@@ -16,8 +16,8 @@ import NextStep from '@/components/NextStep'
 import FooterPanels from '@/components/FooterPanels'
 const customFooterPanels = [
   {
-    title: 'Designing for AI',
-    imageUrl: '/images/footer-cocreation.png',
+    title: 'Integrating Intelligence',
+    imageUrl: '/images/footer-coCreation.png',
     link: '/coCreation',
   },
   {

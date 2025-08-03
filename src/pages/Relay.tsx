@@ -16,7 +16,7 @@ import LargeVideo from '@/components/LargeVideo'
 import FooterPanels from '@/components/FooterPanels'
 const customFooterPanels = [
   {
-    title: 'Co-Creation',
+    title: 'Integrating Intelligence',
     imageUrl: '/images/footer-coCreation.png',
     link: '/coCreation',
   },
