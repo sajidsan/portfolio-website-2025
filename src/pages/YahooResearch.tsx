@@ -14,12 +14,12 @@ import TextBlock from '@/components/TextBlock'
 import FooterPanels from '@/components/FooterPanels'
 const customFooterPanels = [
   {
-    title: 'Design to Code',
+    title: 'Tool Building',
     imageUrl: '/images/footer-relay.png',
     link: '/relay',
   },
   {
-    title: 'Product',
+    title: 'Product Design',
     imageUrl: '/images/footer-therachat.png',
     link: '/therachat',
   },
@@ -29,7 +29,7 @@ const customFooterPanels = [
 //     link: '/yahooResearch',
 //   },
 {
-    title: 'Designing for AI',
+    title: 'Designing with AI Intelligence',
     imageUrl: '/images/footer-coCreation.png',
     link: '/cocreation',
   },

@@ -16,7 +16,7 @@ import LargeVideo from '@/components/LargeVideo'
 import FooterPanels from '@/components/FooterPanels'
 const customFooterPanels = [
   {
-    title: 'Design to Code',
+    title: 'Tool Development',
     imageUrl: '/images/footer-relay.png',
     link: '/relay',
   },

@@ -15,14 +15,14 @@ export default function FooterPanels({ panels }: FooterPanelsProps) {
     <footer className="w-full mt-16">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-12 px-4 sm:px-56 bg-black">
         {panels.map((panel, index) => (
-          <div key={index} className="flex flex-col gap-4">
+          <div key={index} className="flex flex-col gap-2">
             {/* Title */}
-            <div className="text-neutral-300 text-sm sm:text-base font-light">
+            <div className="text-neutral-400 text-sm sm:text-base font-light">
               {panel.title}
             </div>
 
             {/* Image block */}
-            <div className="relative group h-48 sm:h-64 overflow-hidden">
+            <div className="relative group aspect-[16/9] overflow-hidden">
               <a href={panel.link}>
                 <img
                   src={panel.imageUrl}
