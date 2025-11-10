@@ -11,7 +11,7 @@ export default function HomePage() {
 
     <>
 
-    <section className="relative w-full h-dvh flex items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-8 sm:py-64">
+    <section className="relative w-full min-h-screen flex items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-8 sm:py-64">
 
     <div className="flex flex-col items-center text-center">
         <ScrollReveal>
