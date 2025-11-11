@@ -13,7 +13,7 @@ export default function Header() {
                 Sajid <span className="hidden sm:inline">Reshamwala</span>
             </Link>
                 
-                <nav className="space-x-8">
+                <nav className="hidden space-x-8">
                     <a href="#about" className="hover:text-blue-500">About</a>
                     <a href="#projects" className="hover:text-blue-700">Projects</a>
                     <a href="#contact" className="hover:text-blue-700">Contact</a>
