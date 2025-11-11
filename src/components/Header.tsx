@@ -7,9 +7,10 @@ export default function Header() {
         <header className= "fixed top-0 w-full z-50 bg-white/40 backdrop-blur-sm  text-neutral-900">
             <div className="flex items-center justify-between mx-auto px-4 sm:mx-32 sm:px-24 py-4">
             <Link 
-                        to="/" 
-                        className="text-lg font-semibold hover:text-blue-700">
-                        Sajid Reshamwala
+                to="/" 
+                className="text-lg font-semibold hover:text-blue-700"
+                >
+                Sajid <span className="hidden sm:inline">Reshamwala</span>
             </Link>
                 
                 <nav className="space-x-8">
