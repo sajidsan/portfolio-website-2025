@@ -5,6 +5,7 @@ import { LayoutGroup, motion } from "framer-motion"
 import ScrollReveal from "@/components/ScrollReveal"
 import { Link } from 'react-router-dom'
 import Footer from "@/components/footer"
+import HeaderBackground from "@/components/HeaderBackground"
 
 export default function HomePage() {
     return (
@@ -12,8 +13,9 @@ export default function HomePage() {
     <>
 
     <section className="relative w-full min-h-screen flex items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-8 sm:py-64">
+    <HeaderBackground className="inset-0" variantOverride="svg" />
 
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center z-10">
         <ScrollReveal>
         <img 
         src="/images/photo-me.png"

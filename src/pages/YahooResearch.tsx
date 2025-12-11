@@ -29,7 +29,7 @@ const customFooterPanels = [
 //     link: '/yahooResearch',
 //   },
 {
-    title: 'Designing with AI Intelligence',
+    title: 'Designing for AI',
     imageUrl: '/images/footer-coCreation.png',
     link: '/cocreation',
   },

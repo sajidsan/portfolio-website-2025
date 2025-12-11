@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
+import HeaderBackground from './HeaderBackground'
 
 interface ProjectCardProps {
     title: string
@@ -12,6 +13,9 @@ interface ProjectCardProps {
     accentColor?: string
     bgColor?: string
     hideButton?: boolean
+    showBackground?: boolean
+    backgroundVariant?: "css" | "svg" | "canvas"
+    backgroundScheme?: "cool" | "warm" | "citrus" | "insight" | "relay" | "therachat" | "jut" | "yahoo"
 }
 
 
@@ -26,6 +30,9 @@ export default function ProjectCard({
     accentColor = 'blue-700',
     hideButton = false,
     bgColor = 'white',
+    showBackground = false,
+    backgroundVariant = "svg",
+    backgroundScheme = "cool",
 
 }: ProjectCardProps) {
     return (
@@ -42,10 +49,18 @@ export default function ProjectCard({
                             overflow-hidden
                 "
             >   
+                {showBackground && (
+                    <HeaderBackground
+                        className="absolute inset-[-8%] opacity-40"
+                        variantOverride={backgroundVariant}
+                        scheme={backgroundScheme}
+                        randomize
+                    />
+                )}
                 <div className="p-12 
                                 md:w-2/6
-                                ">
-                    {/* // future logo  */}
+                                z-10">
+
                     {logoUrl &&
                     <img className="w-auto h-14 pb-2" src={logoUrl}/> }
                     <h1 className="mb-2 text-5xl text-black-800 font-regular leading-12">{title}</h1>
@@ -67,6 +82,7 @@ export default function ProjectCard({
                         hidden
                         md:block
                         md:w-4/6
+                        z-10
                     "
                     >
                 <ScrollReveal>
@@ -88,4 +104,3 @@ export default function ProjectCard({
         
     )
 }
-
