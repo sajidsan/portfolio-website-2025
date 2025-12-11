@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <header className= "fixed top-0 w-full z-50 bg-white/40 backdrop-blur-sm text-neutral-900 overflow-visible">
-            <div className="relative flex items-center py-4 px-4 sm:px-6 lg:px-8 w-full">
+            <div className="relative flex items-center py-4 px-4 sm:px-10 md:px-14 lg:px-56 xl:px-56 w-full">
                 <Link 
                     to="/" 
                     className="text-lg font-semibold hover:text-blue-700"

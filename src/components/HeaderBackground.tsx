@@ -185,8 +185,8 @@ function CssOrbs({ palette, jitter }: CssOrbsProps) {
                     top: `${(jitterA?.top ?? 0.06) * 100}%`,
                     background: palette.css[0],
                 }}
-                animate={{ x: [0, 36, -28, 0], y: [0, -34, 28, 0], scale: [1, 1.12, 0.92, 1] }}
-                transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 40, -32, 0], y: [0, -38, 32, 0], scale: [1, 1.12, 0.92, 1] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
                 className="absolute w-56 h-56 sm:w-72 sm:h-72 rounded-full blur-3xl"
@@ -195,8 +195,8 @@ function CssOrbs({ palette, jitter }: CssOrbsProps) {
                     top: `${(jitterB?.top ?? 0.28) * 100}%`,
                     background: palette.css[1],
                 }}
-                animate={{ x: [0, -32, 34, 0], y: [0, 30, -24, 0], scale: [1, 1.1, 0.9, 1] }}
-                transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, -36, 38, 0], y: [0, 34, -28, 0], scale: [1, 1.1, 0.9, 1] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
                 className="absolute w-48 h-48 sm:w-60 sm:h-60 rounded-full blur-3xl"
@@ -205,8 +205,8 @@ function CssOrbs({ palette, jitter }: CssOrbsProps) {
                     top: `${(jitterC?.top ?? 0.55) * 100}%`,
                     background: palette.css[2],
                 }}
-                animate={{ x: [0, 26, -22, 0], y: [0, -26, 30, 0], scale: [1, 1.12, 0.88, 1] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 30, -26, 0], y: [0, -30, 34, 0], scale: [1, 1.12, 0.88, 1] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
         </div>
     );
@@ -226,7 +226,7 @@ function SvgBlobs({ palette }: SvgProps) {
             className="absolute inset-0 w-full h-full"
             initial={{ opacity: 0.8 }}
             animate={{ opacity: [0.8, 0.95, 0.85] }}
-            transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         >
             <defs>
                 <linearGradient id={grad1Id} x1="0%" y1="0%" x2="100%" y2="100%">
@@ -250,7 +250,7 @@ function SvgBlobs({ palette }: SvgProps) {
                     y: [0, 26, -18, 0],
                     scale: [1, 1.1, 0.9, 1],
                 }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.path
                 d="M420 60Q520 40 500 140T420 240Q360 260 320 200T360 100Q360 60 420 60Z"
@@ -261,7 +261,7 @@ function SvgBlobs({ palette }: SvgProps) {
                     y: [0, -22, 24, 0],
                     scale: [1, 1.1, 0.9, 1],
                 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
             />
         </motion.svg>
     );

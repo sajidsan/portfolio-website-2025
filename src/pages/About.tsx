@@ -4,7 +4,7 @@ import HeaderBackground from "@/components/HeaderBackground"
 export default function AboutPage() {
     return (
         <section className="relative w-full min-h-screen bg-white text-neutral-900 pt-28 pb-20 px-6 sm:px-12 overflow-hidden">
-            <HeaderBackground className="inset-0 opacity-50" variantOverride="svg" scheme="about" />
+            <HeaderBackground className="inset-0 opacity-60" variantOverride="svg" scheme="about" />
             <div className="relative max-w-4xl mx-auto space-y-6 z-10">
                 <motion.h1
                     className="text-4xl sm:text-5xl font-semibold leading-tight"
@@ -38,7 +38,7 @@ export default function AboutPage() {
                         and led classes at General Assembly.
                     </p>
                     <p className="text-lg leading-relaxed text-neutral-800">
-                        Outside of design, I study jazz at North Carolina Central University. Across design, music, and
+                        In my free time, I study jazz at North Carolina Central University. Across design, music, and
                         drawing, I keep returning to the idea that structure creates freedom and that steady practice
                         changes how you see the world.
                     </p>
