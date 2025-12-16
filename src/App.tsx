@@ -8,6 +8,7 @@ import RelayPage from './pages/Relay'
 import CoCreationPage from './pages/CoCreation'
 import HomePage from '@/pages/HomePage'
 import AboutPage from '@/pages/About'
+import WritingPage from '@/pages/Writing'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/relay" element={<RelayPage />} />
           <Route path="/coCreation" element={<CoCreationPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/writing" element={<WritingPage />} />
         </Routes>
       </main>
     </BrowserRouter>

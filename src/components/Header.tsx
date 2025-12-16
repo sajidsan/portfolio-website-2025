@@ -32,6 +32,7 @@ export default function Header() {
                 </button>
                 <nav className="hidden sm:flex items-center space-x-8 text-sm font-medium ml-auto">
                     <Link to="/about" className="hover:text-blue-700">About</Link>
+                    <Link to="/writing" className="hover:text-blue-700">Writing</Link>
                     <Link to="/" className="hover:text-blue-700">Projects</Link>
                     <a href="https://www.linkedin.com/in/sajidreshamwala" className="hover:text-blue-700" target="_blank" rel="noreferrer">LinkedIn</a>
                 </nav>
@@ -39,6 +40,7 @@ export default function Header() {
                     <div className="absolute left-0 right-0 top-full mt-2 bg-white/95 backdrop-blur-md border border-neutral-200 rounded-lg shadow-lg sm:hidden">
                         <nav className="flex flex-col divide-y divide-neutral-200 text-sm font-medium">
                             <Link to="/about" className="px-4 py-3 hover:bg-neutral-50" onClick={() => setIsOpen(false)}>About</Link>
+                            <Link to="/writing" className="px-4 py-3 hover:bg-neutral-50" onClick={() => setIsOpen(false)}>Writing</Link>
                             <Link to="/" className="px-4 py-3 hover:bg-neutral-50" onClick={() => setIsOpen(false)}>Projects</Link>
                             <a
                                 href="https://www.linkedin.com/in/sajidreshamwala"

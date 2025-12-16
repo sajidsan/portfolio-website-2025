@@ -12,7 +12,8 @@ type PaletteKey =
     | "therachat"
     | "jut"
     | "yahoo"
-    | "about";
+    | "about"
+    | "writing";
 
 type Palette = {
     css: [string, string, string];
@@ -128,6 +129,18 @@ const palettes: Record<PaletteKey, Palette> = {
             grad2: ["rgba(205,180,255,0.5)", "rgba(205,180,255,0.3)"],
         },
         canvas: ["rgba(255,183,150,0.32)", "rgba(205,180,255,0.3)", "rgba(255,183,150,0.24)"],
+    },
+    writing: {
+        css: [
+            "radial-gradient(circle at 22% 30%, rgba(59,130,246,0.5), rgba(125,211,252,0.35), transparent 80%)",
+            "radial-gradient(circle at 72% 42%, rgba(251,146,60,0.5), rgba(249,115,22,0.32), transparent 80%)",
+            "radial-gradient(circle at 50% 68%, rgba(94,234,212,0.45), rgba(59,130,246,0.28), transparent 85%)",
+        ],
+        svg: {
+            grad1: ["rgba(59,130,246,0.5)", "rgba(125,211,252,0.3)"],
+            grad2: ["rgba(251,146,60,0.5)", "rgba(249,115,22,0.3)"],
+        },
+        canvas: ["rgba(59,130,246,0.32)", "rgba(251,146,60,0.3)", "rgba(94,234,212,0.26)"],
     },
 };
 
