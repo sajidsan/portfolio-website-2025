@@ -27,6 +27,7 @@ export default function ImagesSideBySide({
                     className="
                                 pb-4
                                 w-full h-full
+                                hidden md:block
                                 "
                     src={imageUrl1}
                     alt={'Screenshot of ${title}'}
@@ -41,6 +42,7 @@ export default function ImagesSideBySide({
                                 pb-4
                                 
                                 w-full h-full
+                                hidden md:block
                                 "
                     src={imageUrl2}
                     alt={'Screenshot of ${title}'}

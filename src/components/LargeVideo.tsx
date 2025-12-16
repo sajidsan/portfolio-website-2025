@@ -28,7 +28,7 @@ export default function LargeVideo({
 }: LargeVideoProps) {
     return (
         <ScrollReveal>
-            <div className="px-4 sm:px-56 pb-4">
+            <div className="px-4 sm:px-10 md:px-14 lg:px-56 pb-4">
                 <div className={clsx("relative overflow-hidden border-neutral-200", variantStyles[variant])}>
                     <video
                         src={videoUrl}
@@ -41,7 +41,7 @@ export default function LargeVideo({
                     />
                     {overlayText && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-inherit">
-                            <p className="text-white text-xl font-regular text-center px-64">
+                            <p className="text-white text-lg sm:text-xl font-regular text-center px-6 sm:px-10 md:px-14 lg:px-24 max-w-[34ch]">
                                 {overlayText}
                             </p>
                         
@@ -52,7 +52,6 @@ export default function LargeVideo({
         </ScrollReveal>
     );
 }
-
 
 
 

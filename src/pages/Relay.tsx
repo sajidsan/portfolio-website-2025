@@ -74,12 +74,14 @@ export default function RelayPage() {
             imageUrl3="/images/relay-RR-principles-03.png"
             >
         </ImagesSideBySideBySide>
-        <ImagesSideBySideBySide
-            imageUrl1="/images/relay-RR-principles-04.png"
-            imageUrl2="/images/relay-RR-principles-05.png"
-            imageUrl3="/images/relay-RR-principles-06.png"
-            >
-        </ImagesSideBySideBySide>
+        <div className="hidden md:block">
+            <ImagesSideBySideBySide
+                imageUrl1="/images/relay-RR-principles-04.png"
+                imageUrl2="/images/relay-RR-principles-05.png"
+                imageUrl3="/images/relay-RR-principles-06.png"
+                >
+            </ImagesSideBySideBySide>
+        </div>
         <TextAndTitle
             title="Story First, Systems Second"
             text="Relay was confusing for users. Until we nailed the metaphor. I helped frame it not as a tool, but a design-to-code bridge. That shift gave teams a shared language and gave the product a reason to exist."
