@@ -137,5 +137,11 @@ p {
 @layer base {
   html {
     @apply font-sans;
+    background: #fff;
+  }
+
+  body {
+    background: #fff;
+    overflow-x: hidden;
   }
 }
