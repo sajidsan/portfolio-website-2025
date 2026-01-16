@@ -68,7 +68,7 @@ export default function HomePage() {
                 type="button"
                 onClick={handleRotateClick}
                 data-sound-click="custom"
-                className="inline-block align-baseline relative top-[0px] border-0 bg-transparent p-0 transition-transform duration-200 ease-out hover:scale-[1.03]"
+                className="inline-block align-baseline relative top-[0px] border-0 bg-transparent p-0 transition-transform duration-200 ease-out hover:scale-[1.03] cursor-pointer"
                 aria-label="Rotate highlighted word"
               >
                 <TextRotate

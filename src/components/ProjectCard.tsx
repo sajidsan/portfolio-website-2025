@@ -92,15 +92,34 @@ export default function ProjectCard({
                         "
                     >
                         <ScrollReveal>
-                        <img   
-                            className="
-                                
-                                w-full h-full object-cover
-                                "
-                            src={imageUrl}
-                            alt={'Screenshot of ${title}'}
-                            
-                        />  
+                        {hideButton ? (
+                            <img   
+                                className="w-full h-full object-cover"
+                                src={imageUrl}
+                                alt={`Screenshot of ${title}`}
+                            />
+                        ) : href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") ? (
+                            <a
+                                href={href}
+                                className="group block"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+                                    src={imageUrl}
+                                    alt={`Screenshot of ${title}`}
+                                />
+                            </a>
+                        ) : (
+                            <Link to={href} className="group block">
+                                <img
+                                    className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+                                    src={imageUrl}
+                                    alt={`Screenshot of ${title}`}
+                                />
+                            </Link>
+                        )}
                         </ScrollReveal>
                     </div>
                 )}
