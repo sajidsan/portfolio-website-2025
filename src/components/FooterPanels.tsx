@@ -1,4 +1,5 @@
 // components/FooterPanels.tsx
+import { Link } from "react-router-dom"
 
 interface FooterPanel {
   title: string
@@ -14,25 +15,41 @@ export default function FooterPanels({ panels }: FooterPanelsProps) {
   return (
     <footer className="w-full mt-16">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-12 px-4 sm:px-56 bg-black">
-        {panels.map((panel, index) => (
-          <div key={index} className="flex flex-col gap-2">
-            {/* Title */}
-            <div className="text-neutral-400 text-sm sm:text-base font-light">
-              {panel.title}
-            </div>
+        {panels.map((panel, index) => {
+          const isExternal =
+            panel.link.startsWith("http") ||
+            panel.link.startsWith("mailto:") ||
+            panel.link.startsWith("tel:")
 
-            {/* Image block */}
-            <div className="relative group aspect-[16/9] overflow-hidden">
-              <a href={panel.link}>
+          const content = (
+            <>
+              <div className="text-neutral-400 text-sm sm:text-base font-light">
+                {panel.title}
+              </div>
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <img
                   src={panel.imageUrl}
                   alt={panel.title}
                   className="z-0 w-full h-full object-cover opacity-60 transition-opacity duration-500 group-hover:opacity-100"
                 />
+              </div>
+            </>
+          )
+
+          if (isExternal) {
+            return (
+              <a key={index} href={panel.link} className="flex flex-col gap-2 group">
+                {content}
               </a>
-            </div>
-          </div>
-        ))}
+            )
+          }
+
+          return (
+            <Link key={index} to={panel.link} className="flex flex-col gap-2 group">
+              {content}
+            </Link>
+          )
+        })}
       </div>
     </footer>
   )

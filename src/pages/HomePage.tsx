@@ -1,13 +1,45 @@
 
+import { useEffect, useRef, useState } from "react"
 import ProjectCard from "@/components/ProjectCard"
-import TextRotate from "@/fancy/components/text/text-rotate"
+import TextRotate, { type TextRotateRef } from "@/fancy/components/text/text-rotate"
 import { LayoutGroup, motion } from "framer-motion"
 import ScrollReveal from "@/components/ScrollReveal"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Footer from "@/components/footer"
 import HeaderBackground from "@/components/HeaderBackground"
 
 export default function HomePage() {
+    const { hash } = useLocation()
+    const textRotateRef = useRef<TextRotateRef | null>(null)
+    const tapAudioRef = useRef<HTMLAudioElement | null>(null)
+    const [isInstantRotate, setIsInstantRotate] = useState(false)
+
+    useEffect(() => {
+      tapAudioRef.current = new Audio("/sounds/snd02-piano/tap_01.wav")
+      tapAudioRef.current.preload = "auto"
+    }, [])
+
+    useEffect(() => {
+      if (hash === "#projects") {
+        const section = document.getElementById("projects")
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
+      }
+    }, [hash])
+
+    const handleRotateClick = () => {
+      if (tapAudioRef.current) {
+        tapAudioRef.current.currentTime = 0
+        tapAudioRef.current.play().catch(() => {})
+      }
+      setIsInstantRotate(true)
+      requestAnimationFrame(() => {
+        textRotateRef.current?.next()
+        setIsInstantRotate(false)
+      })
+    }
+
     return (
 
     <>
@@ -32,27 +64,34 @@ export default function HomePage() {
             </div>
             <div>
               that help people{" "}
-              <span className="inline-block align-baseline relative top-[0px]">
+              <button
+                type="button"
+                onClick={handleRotateClick}
+                data-sound-click="custom"
+                className="inline-block align-baseline relative top-[0px] border-0 bg-transparent p-0 transition-transform duration-200 ease-out hover:scale-[1.03]"
+                aria-label="Rotate highlighted word"
+              >
                 <TextRotate
-                  texts={["build", "connect", "imagine", "create"]}
+                  ref={textRotateRef}
+                  texts={["build", "connect", "create", "align", "inspire", "lead", "launch", "prototype", "imagine"]}
                   mainClassName="inline-block text-black px-3 bg-lime-300 overflow-hidden py-1 rounded-lg relative top-[24px]"
                   staggerFrom="last"
-                  initial={{ y: "100%" }}
+                  initial={isInstantRotate ? { y: 0, opacity: 1 } : { y: "100%" }}
                   animate={{ y: 0 }}
-                  exit={{ y: "-120%" }}
+                  exit={isInstantRotate ? { y: 0, opacity: 0 } : { y: "-120%" }}
                   staggerDuration={0.025}
                   splitLevelClassName="overflow-hidden pb-1"
-                  transition={{ type: "spring", damping: 60, stiffness: 500 }}
+                  transition={isInstantRotate ? { duration: 0 } : { type: "spring", damping: 60, stiffness: 500 }}
                   rotationInterval={2500}
                 />
-              </span>
+              </button>
             </div>
           </motion.div>
         </ScrollReveal>
     </div>
   </section>
         
-        <section>
+        <section id="projects" className="scroll-mt-24">
         
             <ProjectCard 
             title="InsightUX"
@@ -124,7 +163,7 @@ export default function HomePage() {
                                 ">
                     <img className="w-auto h-14 pb-2" src="/images/logo-yahoo-white.png"/>
                     <h1 className="mb-2 text-5xl text-white font-regular leading-12">Yahoo Research</h1>
-                    <p className="mb-2 text-base text-white">2018-2025</p>
+                    <p className="mb-2 text-base text-white">2012 - 2013</p>
                     <p className="mb-6 font-serif text-xl max-w-prose text-white">As a researcher, I led Yahoo! media teams through ethnographic research, prototyping of initial concepts, and evaluating of prototypes with rapid usability sessions.</p>
                     <Link 
                         to="/yahooResearch" 

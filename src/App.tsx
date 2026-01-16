@@ -1,4 +1,5 @@
 import '@/index.css'
+import { useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from '@/components/Header'
 import TherachatPage from './pages/Therachat'
@@ -10,8 +11,11 @@ import HomePage from '@/pages/HomePage'
 import AboutPage from '@/pages/About'
 import WritingPage from '@/pages/Writing'
 import ScrollToTop from './components/ScrollToTop'
+import { initSoundEffects } from './lib/soundEffects'
 
 function App() {
+  useEffect(() => initSoundEffects(), [])
+
   return (
     <BrowserRouter>
       <ScrollToTop />

@@ -1,9 +1,25 @@
 
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState, type MouseEvent } from "react";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleProjectsClick = (event: MouseEvent<HTMLAnchorElement>) => {
+        if (location.pathname === "/") {
+            event.preventDefault();
+            const section = document.getElementById("projects");
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            navigate("/#projects", { replace: true });
+            setIsOpen(false);
+            return;
+        }
+        setIsOpen(false);
+    };
 
     return (
         <header className= "fixed top-0 w-full z-50 bg-white/40 backdrop-blur-sm text-neutral-900 overflow-visible">
@@ -33,7 +49,7 @@ export default function Header() {
                 <nav className="hidden sm:flex items-center space-x-8 text-sm font-medium ml-auto">
                     <Link to="/about" className="hover:text-blue-700">About</Link>
                     <Link to="/writing" className="hover:text-blue-700">Writing</Link>
-                    <Link to="/" className="hover:text-blue-700">Projects</Link>
+                    <Link to="/#projects" className="hover:text-blue-700" onClick={handleProjectsClick}>Projects</Link>
                     <a href="https://www.linkedin.com/in/sajidreshamwala" className="hover:text-blue-700" target="_blank" rel="noreferrer">LinkedIn</a>
                 </nav>
                 {isOpen && (
@@ -41,7 +57,7 @@ export default function Header() {
                         <nav className="flex flex-col divide-y divide-neutral-200 text-sm font-medium">
                             <Link to="/about" className="px-4 py-3 hover:bg-neutral-50" onClick={() => setIsOpen(false)}>About</Link>
                             <Link to="/writing" className="px-4 py-3 hover:bg-neutral-50" onClick={() => setIsOpen(false)}>Writing</Link>
-                            <Link to="/" className="px-4 py-3 hover:bg-neutral-50" onClick={() => setIsOpen(false)}>Projects</Link>
+                            <Link to="/#projects" className="px-4 py-3 hover:bg-neutral-50" onClick={handleProjectsClick}>Projects</Link>
                             <a
                                 href="https://www.linkedin.com/in/sajidreshamwala"
                                 className="px-4 py-3 hover:bg-neutral-50"

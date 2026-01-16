@@ -48,7 +48,7 @@ export default function YahooResearchPage() {
                     title="Yahoo!"
                     period="2014 - 2015"
                     focus="Ethnography, Usability, and Design Strategy"
-                    summary="I joined Yahoo during a summer internship as design strategist which evolved into a fulltime position as a design researcher.
+                    summary="In 2012, I joined Yahoo during a summer internship as design strategist which evolved into a fulltime position as a design researcher.
 
 Working as a design researcher at Yahoo allowed me to refine my skills in understanding people, bringing teams together, and evaluating ideas with prototyping and usability testing."
 
