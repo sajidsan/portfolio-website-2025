@@ -38,7 +38,7 @@ export default function ProjectIntro({
                                 lg:w-3/6
                                 ">
                     <h1 className="font-primary mb-2 text-5xl text-neutral-800 font-regular leading-12">{title}</h1>
-                    <p className="font-sans uppercase mb-2 text-base text-neutral-800">{focus}</p>
+                    <p className="font-sans uppercase mb-2 text-base text-neutral-800">{focus}, {period}</p>
                     <p className="font-serif mb-6 text-xl max-w-prose text-neutral-800">{summary}</p>
                     
 
@@ -66,4 +66,3 @@ export default function ProjectIntro({
         
     )
 }
-

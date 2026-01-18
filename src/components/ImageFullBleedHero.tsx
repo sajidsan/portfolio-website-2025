@@ -23,7 +23,7 @@ export default function ImageFullBleedHero({
         >
         <div className=
         {clsx(
-        "w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] aspect-[2/1] sm:aspect-[3/1] flex items-center justify-center overflow-hidden border-neutral-200",
+        "w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] aspect-[2/1] sm:aspect-[3/1] flex items-start sm:items-center justify-center overflow-hidden border-neutral-200 pt-16 sm:pt-0 box-border",
         bgClass
           )}
         style={bgHex ? { backgroundColor: bgHex } : {}}
