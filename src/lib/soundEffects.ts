@@ -19,6 +19,11 @@ const INTERACTIVE_SELECTOR = "a, button, [role='button']"
 
 let initialized = false
 
+const isMobileDevice = () => {
+  if (typeof navigator === "undefined") return false
+  return /Mobi|Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
 const isDisabled = (element: Element) => {
   const isButton = element instanceof HTMLButtonElement
   const ariaDisabled = element.getAttribute("aria-disabled") === "true"
@@ -46,7 +51,7 @@ const playSound = (audio: HTMLAudioElement | null) => {
 }
 
 export const initSoundEffects = () => {
-  if (!SOUND_ENABLED || typeof window === "undefined") {
+  if (!SOUND_ENABLED || typeof window === "undefined" || isMobileDevice()) {
     return () => {}
   }
 
@@ -88,6 +93,10 @@ export const initSoundEffects = () => {
     if (!interactive || isDisabled(interactive)) return
     if (interactive.closest("[data-sound-click='custom']")) return
     if (isExternalLink(interactive)) {
+      if (interactive instanceof HTMLElement && interactive.dataset.soundExternal === "linkedin") {
+        playSound(externalClickLinkedInAudio)
+        return
+      }
       if (interactive instanceof HTMLAnchorElement && /linkedin\.com/i.test(interactive.href)) {
         playSound(externalClickLinkedInAudio)
         return

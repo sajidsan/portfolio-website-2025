@@ -50,7 +50,15 @@ export default function Header() {
                     <Link to="/about" className="hover:text-blue-700">About</Link>
                     <Link to="/writing" className="hover:text-blue-700">Writing</Link>
                     <Link to="/#projects" className="hover:text-blue-700" onClick={handleProjectsClick}>Projects</Link>
-                    <a href="https://www.linkedin.com/in/sajidreshamwala" className="hover:text-blue-700" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a
+                        href="https://www.linkedin.com/in/sajidreshamwala"
+                        className="hover:text-blue-700"
+                        target="_blank"
+                        rel="noreferrer"
+                        data-sound-external="linkedin"
+                    >
+                        LinkedIn
+                    </a>
                 </nav>
                 {isOpen && (
                     <div className="absolute left-0 right-0 top-full mt-2 bg-white/95 backdrop-blur-md border border-neutral-200 rounded-lg shadow-lg sm:hidden">
@@ -63,6 +71,7 @@ export default function Header() {
                                 className="px-4 py-3 hover:bg-neutral-50"
                                 target="_blank"
                                 rel="noreferrer"
+                                data-sound-external="linkedin"
                                 onClick={() => setIsOpen(false)}
                             >
                                 LinkedIn

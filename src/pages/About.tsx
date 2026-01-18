@@ -49,6 +49,7 @@ export default function AboutPage() {
                             target="_blank"
                             rel="noreferrer"
                             className="text-blue-700 underline-offset-4 hover:underline"
+                            data-sound-external="linkedin"
                         >
                             LinkedIn
                         </a>

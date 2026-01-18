@@ -60,9 +60,17 @@ export default function WritingPage() {
                 href={post.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block text-2xl font-semibold hover:underline underline-offset-4"
+                className="inline-flex items-center gap-2 text-2xl font-semibold hover:underline underline-offset-4 group"
               >
                 {post.title}
+                <svg
+                  aria-hidden="true"
+                  className="relative top-0 -left-0.5 h-5 w-5 text-black opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59L7.05 15.54l1.41 1.41L19 6.41V10h2V3h-7z" />
+                </svg>
               </a>
               <p className="text-neutral-800 font-serif">{post.description}</p>
             </div>
