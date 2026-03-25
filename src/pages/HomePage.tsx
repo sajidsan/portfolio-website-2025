@@ -2,11 +2,13 @@
 import { useEffect, useRef, useState } from "react"
 import ProjectCard from "@/components/ProjectCard"
 import TextRotate, { type TextRotateRef } from "@/fancy/components/text/text-rotate"
-import { LayoutGroup, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import ScrollReveal from "@/components/ScrollReveal"
 import { Link, useLocation } from 'react-router-dom'
 import Footer from "@/components/footer"
 import HeaderBackground from "@/components/HeaderBackground"
+import WhatIDo from "@/components/WhatIDo"
+import LogoBar from "@/components/LogoBar"
 
 export default function HomePage() {
     const { hash } = useLocation()
@@ -60,10 +62,7 @@ export default function HomePage() {
         >
           <motion.div className="text-4xl leading-tight sm:text-5xl font-light text-black z-10" layout>
             <div>
-              Hi, I'm <span className="">Saj</span> and <span className="">I build things</span>
-            </div>
-            <div>
-              that help people{" "}
+              Hi, I'm <span className="">Saj</span> and<br />I help teams{" "}
               <button
                 type="button"
                 onClick={handleRotateClick}
@@ -88,9 +87,12 @@ export default function HomePage() {
             </div>
           </motion.div>
         </ScrollReveal>
+        <LogoBar />
     </div>
   </section>
         
+        <WhatIDo />
+
         <section id="projects" className="scroll-mt-24">
         
             <ProjectCard 
