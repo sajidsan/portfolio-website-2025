@@ -10,7 +10,7 @@ const items = [
     },
     {
         icon: Microscope,
-        title: "AI Product Design",
+        title: "AI Design",
         description:
             "Building with AI before it was a job title. Launched co-creation programs for Bard and Gemini. Shipped Relay from a research project into something people actually used.",
     },
@@ -30,7 +30,7 @@ const items = [
         icon: GraduationCap,
         title: "Teaching & Mentoring",
         description:
-            "Graduate courses at Academy of Art University. Workshops at General Assembly. I teach the way I wish someone had taught me. Concrete. Useful. No jargon.",
+            "Graduate courses at Academy of Art University. Workshops at General Assembly. I teach the way I wish someone had taught me. Concrete. Heavy on real-world analogies. No jargon.",
     },
     {
         icon: Users,

@@ -46,7 +46,7 @@ export default function ProjectCard({
                 className="relative border-b border-solid border-neutral-200 bg-white
                             w-full mx-auto
                             p-4
-                            sm:px-10 md:px-14 lg:px-56 xl:px-56 py-16 
+                            sm:px-10 sm:py-16 md:px-14 lg:px-56 xl:px-56
                             flex flex-col md:flex-row
                             md:gap-20
                             overflow-hidden

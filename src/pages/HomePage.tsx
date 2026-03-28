@@ -51,7 +51,7 @@ export default function HomePage() {
 
     <div className="flex flex-col items-center text-center z-10">
         <ScrollReveal>
-        <img 
+        <img
         src="/images/photo-me.png"
         alt="Hero Decoration"
         className="w-32 h-32 sm:w-48 sm:h-48 mb-8 object-contain"
@@ -153,14 +153,14 @@ export default function HomePage() {
                             bg-[url(/images/preview-bg-yahoo-research.png)]
                             bg-cover bg-top
                             p-4
-                            pt-16 pb-80
+                            pt-6 pb-8
                             border-none
                             sm:px-44 sm:pt-40 sm:pb-56
                             flex flex-col md:flex-row
                             overflow-hidden
                 "
             >   
-                <div className="p-12 
+                <div className="p-0 sm:p-12
                                 md:w-2/6
                                 ">
                     <img className="w-auto h-14 pb-2" src="/images/logo-yahoo-white.png"/>
